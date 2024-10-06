@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Login from './components/Login';
+import { Analytics } from "@vercel/analytics/react"
 import StudentDashboard from './components/StudentDashboard';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       ) : (
         <Login onLogin={() => setIsLoggedIn(true)} />
       )}
+      <Analytics/>
     </div>
   );
 }
